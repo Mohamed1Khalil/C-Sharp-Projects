@@ -19,7 +19,7 @@ class Program
             {
                 FirstName = "Mohamed",
                 LastName = "Khalil",
-                DateOfBirth = new DateTime(1991,9, 18)
+                DateOfBirth = new DateTime(1991,9, 24)
             };
 
             // Add the student to the Students DbSet
@@ -31,7 +31,7 @@ class Program
             Console.WriteLine("The Student is added successfully!");
 
             // Retrieve and display the student to verify
-            var savedStudent = context.Students.FirstOrDefault(s => s.FirstName == "Waiel");
+            var savedStudent = context.Students.FirstOrDefault(s => s.FirstName == "Mohamed");
             if (savedStudent != null)
             {
                 Console.WriteLine($" Student: {savedStudent.FirstName} {savedStudent.LastName}");
@@ -40,4 +40,5 @@ class Program
 
     
     }
+
 }
